@@ -45,6 +45,9 @@ class AutoPage extends ObjectModel
     /** @var string|array */
     public $content;
 
+    /** @var string|array Plain-text content served at /auto/{category}/{title}/llm.txt */
+    public $llm;
+
     public static $definition = [
         'table' => 'auto_page',
         'primary' => 'id_auto_page',
@@ -64,6 +67,7 @@ class AutoPage extends ObjectModel
             'meta_description' => ['type' => self::TYPE_STRING, 'lang' => true, 'validate' => 'isGenericName', 'size' => 512],
             'meta_keywords' => ['type' => self::TYPE_STRING, 'lang' => true, 'validate' => 'isGenericName', 'size' => 255],
             'content' => ['type' => self::TYPE_HTML, 'lang' => true, 'validate' => 'isCleanHtml', 'size' => 4194303],
+            'llm' => ['type' => self::TYPE_STRING, 'lang' => true, 'validate' => 'isCleanHtml', 'size' => 4194303],
         ],
     ];
 

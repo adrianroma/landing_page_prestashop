@@ -30,7 +30,7 @@ class Auto extends Module
     {
         $this->name = 'auto';
         $this->tab = 'content_management';
-        $this->version = '1.0.0';
+        $this->version = '1.0.1';
         $this->author = 'RecoAutos';
         $this->need_instance = 0;
         $this->ps_versions_compliancy = ['min' => '1.7', 'max' => _PS_VERSION_];
@@ -170,6 +170,19 @@ class Auto extends Module
                     'fc' => 'module',
                     'module' => 'auto',
                     'controller' => 'page',
+                ],
+            ],
+            'module-auto-llm' => [
+                'controller' => 'llm',
+                'rule' => 'auto/{category}/{title}/llm.txt',
+                'keywords' => [
+                    'category' => ['regexp' => '[_a-zA-Z0-9\-]+', 'param' => 'category'],
+                    'title' => ['regexp' => '[_a-zA-Z0-9\-]+', 'param' => 'title'],
+                ],
+                'params' => [
+                    'fc' => 'module',
+                    'module' => 'auto',
+                    'controller' => 'llm',
                 ],
             ],
         ];

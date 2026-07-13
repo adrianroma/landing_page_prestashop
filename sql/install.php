@@ -59,6 +59,7 @@ $sql[] = 'CREATE TABLE IF NOT EXISTS `' . _DB_PREFIX_ . 'auto_page_lang` (
     `meta_description` VARCHAR(512) DEFAULT NULL,
     `meta_keywords` VARCHAR(255) DEFAULT NULL,
     `content` MEDIUMTEXT,
+    `llm` MEDIUMTEXT,
     PRIMARY KEY (`id_auto_page`, `id_lang`, `id_shop`),
     KEY `idx_auto_page_lang_rewrite` (`link_rewrite`)
 ) ENGINE=' . _MYSQL_ENGINE_ . ' DEFAULT CHARSET=utf8mb4';

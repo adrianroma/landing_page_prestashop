@@ -2,7 +2,7 @@
 <module>
     <name>auto</name>
     <displayName><![CDATA[Auto]]></displayName>
-    <version><![CDATA[1.0.0]]></version>
+    <version><![CDATA[1.0.1]]></version>
     <description><![CDATA[Content pages organized by category, published under /auto/{category}/{title}.]]></description>
     <author><![CDATA[RecoAutos]]></author>
     <tab><![CDATA[content_management]]></tab>

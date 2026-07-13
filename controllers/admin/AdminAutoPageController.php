@@ -90,6 +90,13 @@ class AdminAutoPageController extends ModuleAdminController
                     'autoload_rte' => true,
                 ],
                 [
+                    'type' => 'textarea',
+                    'label' => $this->l('LLM info'),
+                    'name' => 'llm',
+                    'lang' => true,
+                    'hint' => $this->l('Plain-text information for LLM crawlers, published at /auto/{category}/{this page}/llm.txt.'),
+                ],
+                [
                     'type' => 'text',
                     'label' => $this->l('Meta title'),
                     'name' => 'meta_title',
